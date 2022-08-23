@@ -5,10 +5,11 @@ main {
 .fix-main {
   width: 100%;
   display: flex;
-  justify-content: center;
-  .demontration-block {
+  flex-direction: column;
+  align-items: center;
+  .demonstration-block {
     max-width: 1110px;
-    margin: 54px auto 0 auto;
+    margin: 54px auto 110px auto;
     display: flex;
     flex-wrap: wrap;
     .information {
@@ -122,4 +123,150 @@ main {
       }
     }
   }
+  .products-block {
+    display: flex;
+    max-width: 1110px;
+    flex-wrap: wrap;
+    margin-bottom: 160px;
+    .product {
+      display: flex;
+      .product-view {
+        width: 262px;
+        margin-right: 30px;
+      }
+      .product-description {
+        width: 256px;
+      }
+      .product-slogan {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 40px;
+        text-align: center;
+        color: $descriptionText;
+        display: inline;
+      }
+      .product-description-text {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        opacity: 0.6;
+        margin-bottom: 20px;
+        color: $descriptionText;
+      }
+      .price {
+        display: inline-block;
+        color: $descriptionText;
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 27px;
+        text-align: center;
+        margin-right: 2px;
+      }
+      .old-price {
+        display: inline-block;
+        font-family: "Hind ";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 27px;
+        text-align: center;
+        text-decoration-line: line-through;
+        color: $descriptionText;
+        opacity: 0.5;
+
+        &::before {
+          content: "/";
+          color: $descriptionText;
+          opacity: 0.5;
+          font-family: "Hind ";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 27px;
+          text-align: center;
+          margin-right: 2px;
+          text-decoration-line: none;
+        }
+      }
+      .rating {
+        margin-top: 15px;
+        .rate-star {
+          @include bgi(url(../../../imgs/icons/starnotfill.svg));
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          &.fill {
+            @include bgi(url(../../../imgs/icons/star.svg));
+          }
+        }
+      }
+    }
+  }
+  .proposal-block {
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 111px;
+    .proposal-content {
+      overflow: hidden;
+      position: relative;
+      padding: 75px 0 74px 35px;
+      width: 555px;
+      height: 296px;
+      background: linear-gradient(257.26deg, #008bf0 -13.2%, #d943c9 130.95%);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      &:first-child {
+        margin-right: 30px;
+      }
+      .proposal-text {
+      }
+      .sale {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 27px;
+        text-transform: uppercase;
+        color: $bgUserPic;
+        opacity: 0.6;
+        margin-bottom: 5px;
+      }
+      .product-name {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 40px;
+        color: $bgUserPic;
+        margin-bottom: 7px;
+      }
+      .link-to-product {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 27px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $bgUserPic;
+        display: inline;
+      }
+      .pic {
+        position: absolute;
+        top: 36px;
+        right: 25.85px;
+      }
+    }
+  }
+}
+
+#drone {
+  top: -35px;
+  right: -45.15px;
 }
