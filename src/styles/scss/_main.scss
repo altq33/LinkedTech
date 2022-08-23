@@ -1,0 +1,125 @@
+main {
+  width: 100%;
+  padding: 0 20px;
+}
+.fix-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .demontration-block {
+    max-width: 1110px;
+    margin: 54px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    .information {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .category {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.145em;
+        text-transform: uppercase;
+        color: $bgNumberShopping;
+        margin-bottom: 3px;
+      }
+      .description {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 61px;
+        line-height: 73px;
+        color: $descriptionText;
+        margin-bottom: 29px;
+      }
+      .mark {
+        display: table;
+        padding: 5px 5px 5px 0;
+        color: $descriptionMark;
+        background-color: $descriptionMarkbg;
+      }
+      .bottom-description {
+        font-family: "Hind";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 36px;
+        margin-right: 68px;
+        color: $descriptionText;
+      }
+      .buy-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .buy-button {
+          width: 151px;
+          height: 58px;
+          background-color: $descriptionMark;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Hind";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 26px;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-right: 31px;
+        }
+        .price {
+          color: $descriptionText;
+          font-family: "Hind";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+          text-align: center;
+          margin-right: 18px;
+        }
+        .old-price {
+          font-family: "Hind";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 27px;
+          text-align: center;
+          text-decoration-line: line-through;
+          color: $descriptionText;
+          opacity: 0.5;
+        }
+      }
+    }
+    .picture {
+      width: 50%;
+      align-self: flex-end;
+      img {
+        width: 100%;
+      }
+    }
+    .sponsors {
+      display: flex;
+      width: 93%;
+      flex-wrap: wrap;
+      padding: 76px 118px;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0px 100px 80px rgba(174, 174, 174, 0.08),
+        0px 43.751px 36.4414px rgba(174, 174, 174, 0.0575083),
+        0px 19.8401px 19.1406px rgba(174, 174, 174, 0.0476886),
+        0px 6.77214px 9.61331px rgba(174, 174, 174, 0.04),
+        0px 0.190079px 4.14347px rgba(174, 174, 174, 0.0323114),
+        0px -1.73968px 1.20532px rgba(174, 174, 174, 0.0224916);
+      .sponsors-pic {
+        width: 163px;
+        height: 85px;
+      }
+    }
+  }
+}

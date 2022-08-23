@@ -1,0 +1,11 @@
+@mixin bgi($url, $repeat: no-repeat, $size: cover, $pos: center) {
+  background-image: $url;
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $pos;
+}
+
+@mixin animation($time, $transformType: scale(1.1)) {
+  transform: $transformType;
+  transition: all $time ease;
+}

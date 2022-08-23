@@ -1,0 +1,109 @@
+header {
+  padding: 0 20px;
+  width: 100%;
+  color: $bgHeaderColor;
+  .header-wrap {
+    max-width: 1110px;
+    margin: 0 auto;
+    .header-content {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        height: 25.663257598876953px;
+        width: 106px;
+        background-image: url(../../../imgs/img/logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .menu-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 573px;
+        .menu {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          height: 23px;
+          list-style: none;
+        }
+        .menu-item {
+          display: flex;
+          align-items: center;
+          height: 23px;
+          font-family: Hind;
+          font-size: 14px;
+          line-height: 22.64px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: $menuColor;
+          transition: 0.3s ease all;
+          &:after {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 4px;
+            background-image: url(../../../imgs/icons/menuarrow.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 8px;
+          }
+          &:hover {
+            transform: scale(1.1);
+            color: $hoverMenuColor;
+            transition: 0.3s ease all;
+          }
+        }
+      }
+      .user-bar {
+        width: 127px;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search-button {
+          width: 16px;
+          height: 16px;
+          @include bgi(url(../../../imgs/icons/search.svg));
+          background-color: inherit;
+          cursor: pointer;
+        }
+        .basket {
+          width: 16px;
+          height: 15.27px;
+          @include bgi(url(../../../imgs/icons/basket.svg));
+
+          .number-shopping {
+            width: 12px;
+            height: 12px;
+            background-color: $bgNumberShopping;
+            color: white;
+            font-family: Hind;
+            font-size: 10px;
+            line-height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: relative;
+            left: 10px;
+            bottom: 4.82px;
+          }
+        }
+        .user-pic-container {
+          @include bgi(url(../../../imgs/icons/userpic.svg), no-repeat, 16px);
+          display: block;
+          width: 35px;
+          height: 35px;
+          background-color: $bgUserPic;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

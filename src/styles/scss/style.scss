@@ -1,0 +1,15 @@
+@import "./mixins.scss";
+@import "./vars.scss";
+@import "./fonts";
+@import "./zerostyle";
+
+.wrap {
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@import "./header";
+@import "./main";
