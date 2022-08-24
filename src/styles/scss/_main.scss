@@ -1,6 +1,5 @@
 main {
   width: 100%;
-  padding: 0 20px;
 }
 .fix-main {
   width: 100%;
@@ -212,7 +211,7 @@ main {
     max-width: 1140px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 111px;
+    margin-bottom: 284px;
     .proposal-content {
       overflow: hidden;
       position: relative;
@@ -223,50 +222,142 @@ main {
       border: 1px solid rgba(0, 0, 0, 0.1);
       &:first-child {
         margin-right: 30px;
+        .pic {
+          top: -35px;
+          right: -45.15px;
+        }
       }
-      .proposal-text {
+    }
+
+    .proposal-text {
+    }
+    .sale {
+      font-family: "Hind";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: $bgUserPic;
+      opacity: 0.6;
+      margin-bottom: 5px;
+    }
+    .product-name {
+      font-family: "Hind";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 31px;
+      line-height: 40px;
+      color: $bgUserPic;
+      margin-bottom: 7px;
+    }
+    .link-to-product {
+      font-family: "Hind";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $bgUserPic;
+      display: inline;
+    }
+    .pic {
+      position: absolute;
+      top: 36px;
+      right: 25.85px;
+    }
+  }
+  .about-wrap {
+    margin-bottom: 124px;
+    width: 100%;
+    background-color: $bgUserPic;
+    height: 545px;
+    display: flex;
+    justify-content: center;
+    .fix-about {
+      max-width: 1110px;
+      flex-wrap: wrap;
+      display: flex;
+      .left-part {
+        width: 50%;
+        .left-pic {
+          width: 100%;
+          position: relative;
+          bottom: 200px;
+        }
       }
-      .sale {
-        font-family: "Hind";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 27px;
-        text-transform: uppercase;
-        color: $bgUserPic;
-        opacity: 0.6;
-        margin-bottom: 5px;
-      }
-      .product-name {
-        font-family: "Hind";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 31px;
-        line-height: 40px;
-        color: $bgUserPic;
-        margin-bottom: 7px;
-      }
-      .link-to-product {
-        font-family: "Hind";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 27px;
-        text-align: center;
-        text-transform: uppercase;
-        color: $bgUserPic;
-        display: inline;
-      }
-      .pic {
-        position: absolute;
-        top: 36px;
-        right: 25.85px;
+      .right-part {
+        width: 50%;
+        padding-left: 150px;
+        .text-block {
+          position: relative;
+          top: -40px;
+          width: 100%;
+          font-family: "Hind";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: $descriptionText;
+          opacity: 0.6;
+        }
+        .about-products-container {
+          width: 100%;
+          position: relative;
+          bottom: 124px;
+          .about-products-link {
+            display: inline;
+            font-family: "Hind";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 23px;
+            letter-spacing: 0.145em;
+            text-transform: uppercase;
+            color: $bgNumberShopping;
+            opacity: 0.6;
+          }
+          .about-products-title {
+            font-family: "Hind";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 44px;
+            line-height: 71px;
+            color: $descriptionText;
+          }
+        }
+        .list-block {
+          .check {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .check-item {
+            margin-bottom: 20px;
+            font-family: "Hind";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 27px;
+            color: $descriptionText;
+            display: flex;
+            align-items: center;
+            &:before {
+              border-radius: 50%;
+              margin-right: 13px;
+              content: "";
+              display: block;
+              min-width: 18px;
+              min-height: 18px;
+              @include bgi(url(../../../imgs/icons/checklist.svg));
+              align-self: flex-start;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
       }
     }
   }
-}
-
-#drone {
-  top: -35px;
-  right: -45.15px;
 }

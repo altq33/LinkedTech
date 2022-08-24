@@ -46,6 +46,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #e5e5e5;
+  font-family: "Hind";
 }
 
 input,
@@ -219,7 +220,6 @@ header .header-wrap .header-content .user-bar .user-pic-container {
 
 main {
   width: 100%;
-  padding: 0 20px;
 }
 
 .fix-main {
@@ -436,7 +436,7 @@ main {
   max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 111px;
+  margin-bottom: 284px;
 }
 .fix-main .proposal-block .proposal-content {
   overflow: hidden;
@@ -450,7 +450,11 @@ main {
 .fix-main .proposal-block .proposal-content:first-child {
   margin-right: 30px;
 }
-.fix-main .proposal-block .proposal-content .sale {
+.fix-main .proposal-block .proposal-content:first-child .pic {
+  top: -35px;
+  right: -45.15px;
+}
+.fix-main .proposal-block .sale {
   font-family: "Hind";
   font-style: normal;
   font-weight: 500;
@@ -461,7 +465,7 @@ main {
   opacity: 0.6;
   margin-bottom: 5px;
 }
-.fix-main .proposal-block .proposal-content .product-name {
+.fix-main .proposal-block .product-name {
   font-family: "Hind";
   font-style: normal;
   font-weight: 600;
@@ -470,7 +474,7 @@ main {
   color: #f4f9fc;
   margin-bottom: 7px;
 }
-.fix-main .proposal-block .proposal-content .link-to-product {
+.fix-main .proposal-block .link-to-product {
   font-family: "Hind";
   font-style: normal;
   font-weight: 500;
@@ -481,13 +485,151 @@ main {
   color: #f4f9fc;
   display: inline;
 }
-.fix-main .proposal-block .proposal-content .pic {
+.fix-main .proposal-block .pic {
   position: absolute;
   top: 36px;
   right: 25.85px;
 }
+.fix-main .about-wrap {
+  margin-bottom: 124px;
+  width: 100%;
+  background-color: #f4f9fc;
+  height: 545px;
+  display: flex;
+  justify-content: center;
+}
+.fix-main .about-wrap .fix-about {
+  max-width: 1110px;
+  flex-wrap: wrap;
+  display: flex;
+}
+.fix-main .about-wrap .fix-about .left-part {
+  width: 50%;
+}
+.fix-main .about-wrap .fix-about .left-part .left-pic {
+  width: 100%;
+  position: relative;
+  bottom: 200px;
+}
+.fix-main .about-wrap .fix-about .right-part {
+  width: 50%;
+  padding-left: 150px;
+}
+.fix-main .about-wrap .fix-about .right-part .text-block {
+  position: relative;
+  top: -40px;
+  width: 100%;
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #030d15;
+  opacity: 0.6;
+}
+.fix-main .about-wrap .fix-about .right-part .about-products-container {
+  width: 100%;
+  position: relative;
+  bottom: 124px;
+}
+.fix-main .about-wrap .fix-about .right-part .about-products-container .about-products-link {
+  display: inline;
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  color: #c72535;
+  opacity: 0.6;
+}
+.fix-main .about-wrap .fix-about .right-part .about-products-container .about-products-title {
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 71px;
+  color: #030d15;
+}
+.fix-main .about-wrap .fix-about .right-part .list-block .check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.fix-main .about-wrap .fix-about .right-part .list-block .check-item {
+  margin-bottom: 20px;
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 27px;
+  color: #030d15;
+  display: flex;
+  align-items: center;
+}
+.fix-main .about-wrap .fix-about .right-part .list-block .check-item:before {
+  border-radius: 50%;
+  margin-right: 13px;
+  content: "";
+  display: block;
+  min-width: 18px;
+  min-height: 18px;
+  background-image: url(../../../imgs/icons/checklist.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-self: flex-start;
+  position: relative;
+  top: 3px;
+}
 
-#drone {
-  top: -35px;
-  right: -45.15px;
+.popular-products-block {
+  display: flex;
+  max-width: 1110px;
+  flex-direction: column;
+  justify-content: center;
+}
+.popular-products-block .new-products {
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #c72535;
+  opacity: 0.6;
+  text-align: center;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+}
+.popular-products-block .popular-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 71px;
+  text-align: center;
+  color: #030d15;
+}
+.popular-products-block .categories-of-popular {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-products-block .categories-item {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #030d15;
+  opacity: 0.6;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.popular-products-block .categories-item:last-child {
+  margin: 0;
+}
+.popular-products-block .current {
+  color: #c72535;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
