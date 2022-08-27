@@ -180,6 +180,7 @@ main {
         opacity: 0.5;
 
         &::before {
+          display: inline-block;
           content: "/";
           color: $descriptionText;
           opacity: 0.5;
@@ -191,18 +192,6 @@ main {
           text-align: center;
           margin-right: 2px;
           text-decoration-line: none;
-        }
-      }
-      .rating {
-        margin-top: 15px;
-        .rate-star {
-          @include bgi(url(../../../imgs/icons/starnotfill.svg));
-          width: 12px;
-          height: 12px;
-          display: inline-block;
-          &.fill {
-            @include bgi(url(../../../imgs/icons/star.svg));
-          }
         }
       }
     }
@@ -358,6 +347,18 @@ main {
           }
         }
       }
+    }
+  }
+}
+.rating {
+  margin-top: 15px;
+  .rate-star {
+    @include bgi(url(../../../imgs/icons/starnotfill.svg));
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    &.fill {
+      @include bgi(url(../../../imgs/icons/star.svg));
     }
   }
 }
