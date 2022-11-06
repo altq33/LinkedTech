@@ -1,0 +1,169 @@
+.footer-container {
+  height: 396px;
+  width: 100%;
+  background: $menuColor;
+  display: flex;
+  justify-content: center;
+}
+
+.fix-content {
+  max-width: 1140px;
+  display: flex;
+  flex-basis: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store-information {
+  width: 261px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  img {
+    width: 66px;
+    margin-bottom: 22.15px;
+  }
+}
+.store-info-text {
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.nav-section {
+  width: 164px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.nav-section-title {
+  font-family: "Hind";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.about-store {
+  width: 261px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .company-link {
+    display: block;
+    font-family: "Hind";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
+    margin-top: 14px;
+    margin-bottom: 16px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  li {
+    font-family: "Hind";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-bottom: 15px;
+  }
+}
+
+.social-media {
+  margin-bottom: 58px;
+  ul {
+    display: flex;
+    height: 15.25px;
+    .social-link {
+      display: inline-block;
+      margin-right: 25px;
+      height: 100%;
+      width: 20px;
+      li {
+        height: 100%;
+      }
+      &:first-child li {
+        @include bgi(
+          url("../../../imgs/icons/instagram.svg"),
+          no-repeat,
+          contain,
+          left
+        );
+      }
+      &:nth-child(2) li {
+        @include bgi(
+          url("../../../imgs/icons/facebook.svg"),
+          no-repeat,
+          contain,
+          left
+        );
+      }
+      &:nth-child(3) li {
+        @include bgi(
+          url("../../../imgs/icons/twitter.svg"),
+          no-repeat,
+          contain,
+          left
+        );
+      }
+      &:nth-child(4) li {
+        @include bgi(
+          url("../../../imgs/icons/in.svg"),
+          no-repeat,
+          contain,
+          left
+        );
+      }
+      &:last-child li {
+        @include bgi(
+          url("../../../imgs/icons/youtube.svg"),
+          no-repeat,
+          contain,
+          left
+        );
+      }
+    }
+  }
+}
+
+.select-lang {
+  &::before {
+    position: relative;
+    top: 3px;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    @include bgi(url("../../../imgs/icons/lang.svg"));
+    margin-right: 9px;
+  }
+  &::after {
+    position: relative;
+    margin-left: 3px;
+    top: -2px;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 4px;
+    @include bgi(url("../../../imgs/icons/vector.svg"));
+  }
+}

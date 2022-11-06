@@ -3,6 +3,7 @@
   max-width: 1140px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   .new-products {
     font-family: "Hind";
     font-style: normal;
@@ -22,6 +23,7 @@
     line-height: 71px;
     text-align: center;
     color: $descriptionText;
+    margin-bottom: 22px;
   }
   .categories-of-popular {
     display: flex;
@@ -53,6 +55,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
     .products-slider-item {
       position: relative;
       background: #ffffff;
@@ -229,6 +232,29 @@
           width: 16px;
           height: 16px;
         }
+      }
+    }
+  }
+  .view-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 146px;
+    .all-products-link {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 23px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $descriptionText;
+      &::after {
+        display: inline-block;
+        margin-left: 10px;
+        content: "";
+        @include bgi(url("../../../imgs/icons/arrrow.svg"));
+        width: 26px;
+        height: 10px;
       }
     }
   }
