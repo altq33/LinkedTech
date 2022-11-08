@@ -49,6 +49,10 @@ body {
   font-family: "Hind";
 }
 
+html {
+  padding-top: 144px;
+}
+
 input,
 button,
 textarea {
@@ -106,7 +110,12 @@ h6 {
 header {
   padding: 0 20px;
   width: 100%;
-  color: white;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
 }
 header .header-wrap {
   max-width: 1110px;
@@ -130,6 +139,33 @@ header .header-wrap .header-content .menu-wrap {
   display: flex;
   justify-content: space-between;
   width: 573px;
+  z-index: 10000;
+}
+@media (max-width: 980px) {
+  header .header-wrap .header-content .menu-wrap {
+    display: none;
+  }
+}
+header .header-wrap .header-content .menu-wrap.active {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: 90px;
+  left: 0;
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+header .header-wrap .header-content .menu-wrap.active .menu {
+  width: auto;
+  flex-direction: column;
+  align-items: space-between;
+  height: 40%;
+}
+header .header-wrap .header-content .menu-wrap.active .menu .menu-item {
+  font-size: 20px;
 }
 header .header-wrap .header-content .menu-wrap .menu {
   display: flex;
@@ -218,6 +254,59 @@ header .header-wrap .header-content .user-bar .user-pic-container {
   border-radius: 50%;
 }
 
+.burger-button {
+  background: transparent;
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  display: none;
+  z-index: 10001;
+}
+@media (max-width: 980px) {
+  .burger-button {
+    display: block;
+  }
+}
+
+.burger-line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  transition: 0.3s;
+}
+.burger-line:first-child {
+  top: 1px;
+}
+.burger-line:nth-child(2) {
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger-line:nth-child(3) {
+  height: 1px;
+  top: 50%;
+}
+.burger-line:last-child {
+  bottom: 0;
+}
+
+.burger-button.active .burger-line:first-child {
+  opacity: 0;
+}
+.burger-button.active .burger-line:last-child {
+  opacity: 0;
+}
+.burger-button.active .burger-line:nth-child(2) {
+  transform: translateY(-50%) rotate(45deg);
+}
+.burger-button.active .burger-line:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 main {
   width: 100%;
 }
@@ -234,11 +323,23 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 980px) {
+  .fix-main .demonstration-block {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .fix-main .demonstration-block .information {
+  padding-left: 20px;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (max-width: 980px) {
+  .fix-main .demonstration-block .information {
+    width: 100%;
+  }
 }
 .fix-main .demonstration-block .information .category {
   font-family: "Hind";
@@ -323,6 +424,13 @@ main {
   width: 50%;
   align-self: flex-end;
 }
+@media (max-width: 980px) {
+  .fix-main .demonstration-block .picture {
+    margin-top: 40px;
+    width: 60%;
+    align-self: center;
+  }
+}
 .fix-main .demonstration-block .picture img {
   width: 100%;
 }
@@ -333,8 +441,14 @@ main {
   padding: 76px 118px;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   background: #ffffff;
   box-shadow: 0px 100px 80px rgba(174, 174, 174, 0.08), 0px 43.751px 36.4414px rgba(174, 174, 174, 0.0575083), 0px 19.8401px 19.1406px rgba(174, 174, 174, 0.0476886), 0px 6.77214px 9.61331px rgba(174, 174, 174, 0.04), 0px 0.190079px 4.14347px rgba(174, 174, 174, 0.0323114), 0px -1.73968px 1.20532px rgba(174, 174, 174, 0.0224916);
+}
+@media (max-width: 640px) {
+  .fix-main .demonstration-block .sponsors {
+    justify-content: center;
+  }
 }
 .fix-main .demonstration-block .sponsors .sponsors-pic {
   width: 163px;
@@ -346,8 +460,18 @@ main {
   flex-wrap: wrap;
   margin-bottom: 160px;
 }
+@media (max-width: 1130px) {
+  .fix-main .products-block {
+    justify-content: center;
+  }
+}
 .fix-main .products-block .product {
   display: flex;
+}
+@media (max-width: 1130px) {
+  .fix-main .products-block .product {
+    margin-bottom: 30px;
+  }
 }
 .fix-main .products-block .product .product-view {
   width: 262px;
@@ -421,6 +545,11 @@ main {
   flex-wrap: wrap;
   margin-bottom: 284px;
 }
+@media (max-width: 1175px) {
+  .fix-main .proposal-block {
+    justify-content: center;
+  }
+}
 .fix-main .proposal-block .proposal-content {
   overflow: hidden;
   position: relative;
@@ -436,6 +565,14 @@ main {
 .fix-main .proposal-block .proposal-content:first-child .pic {
   top: -35px;
   right: -45.15px;
+}
+@media (max-width: 1175px) {
+  .fix-main .proposal-block .proposal-content {
+    margin-bottom: 30px;
+  }
+  .fix-main .proposal-block .proposal-content:first-child {
+    margin-right: 0;
+  }
 }
 .fix-main .proposal-block .sale {
   font-family: "Hind";
@@ -489,6 +626,11 @@ main {
 .fix-main .about-wrap .fix-about .left-part {
   width: 50%;
 }
+@media (max-width: 1047px) {
+  .fix-main .about-wrap .fix-about .left-part {
+    display: none;
+  }
+}
 .fix-main .about-wrap .fix-about .left-part .left-pic {
   width: 100%;
   position: relative;
@@ -497,6 +639,13 @@ main {
 .fix-main .about-wrap .fix-about .right-part {
   width: 50%;
   padding-left: 150px;
+}
+@media (max-width: 1047px) {
+  .fix-main .about-wrap .fix-about .right-part {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 .fix-main .about-wrap .fix-about .right-part .text-block {
   position: relative;
@@ -643,6 +792,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  justify-content: center;
+}
+@media (max-width: 765px) {
+  .popular-products-block .products-slider {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .popular-products-block .products-slider .products-slider-item {
   position: relative;
@@ -833,6 +989,22 @@ main {
   width: 16px;
   height: 16px;
 }
+@media (max-width: 1155px) {
+  .popular-products-block .products-slider .products-slider-item:nth-child(3n) {
+    margin: 0;
+  }
+  .popular-products-block .products-slider .products-slider-item:nth-child(2n+1) {
+    margin: 0 30px 30px 0;
+  }
+  .popular-products-block .products-slider .products-slider-item:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media (max-width: 765px) {
+  .popular-products-block .products-slider .products-slider-item {
+    margin: 0 0 30px 0 !important;
+  }
+}
 .popular-products-block .view-all {
   width: 100%;
   display: flex;
@@ -875,12 +1047,14 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .left-column,
 .right-column,
 .middle-column {
   width: 360px;
+  margin-bottom: 30px;
 }
 
 .left-column,
@@ -948,7 +1122,7 @@ a:nth-child(2) .right-column-item {
 
 .contact-us {
   width: 100%;
-  height: 310px;
+  min-height: 310px;
   background-color: #f4f9fc;
   margin-top: 100px;
   display: flex;
@@ -963,12 +1137,25 @@ a:nth-child(2) .right-column-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+}
+@media (max-width: 980px) {
+  .fixed-contact-us {
+    flex-direction: column;
+    flex: 0 0 auto;
+  }
 }
 
 .contact-us-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (max-width: 980px) {
+  .contact-us-description {
+    align-self: flex-start;
+    margin-bottom: 30px;
+  }
 }
 .contact-us-description h3 {
   font-family: "Hind";
@@ -1038,12 +1225,18 @@ a:nth-child(2) .right-column-item {
 }
 
 .fix-content {
+  padding: 30px;
   max-width: 1140px;
   display: flex;
   flex-basis: 100%;
   height: 100%;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .fix-content {
+    justify-content: center;
+  }
 }
 
 .store-information {
@@ -1055,6 +1248,11 @@ a:nth-child(2) .right-column-item {
 .store-information img {
   width: 66px;
   margin-bottom: 22.15px;
+}
+@media (max-width: 600px) {
+  .store-information {
+    display: none;
+  }
 }
 
 .store-info-text {
@@ -1073,6 +1271,11 @@ a:nth-child(2) .right-column-item {
   display: flex;
   flex-direction: column;
   align-items: space-between;
+}
+@media (max-width: 1020px) {
+  .nav-section {
+    display: none;
+  }
 }
 
 .nav-section-title {

@@ -13,12 +13,14 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .left-column,
 .right-column,
 .middle-column {
   width: 360px;
+  margin-bottom: 30px;
 }
 
 .left-column,
@@ -88,7 +90,7 @@ a:nth-child(2) .right-column-item {
 
 .contact-us {
   width: 100%;
-  height: 310px;
+  min-height: 310px;
   background-color: $contactUsBg;
   margin-top: 100px;
   display: flex;
@@ -103,12 +105,21 @@ a:nth-child(2) .right-column-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  @media (max-width: 980px) {
+    flex-direction: column;
+    flex: 0 0 auto;
+  }
 }
 
 .contact-us-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media (max-width: 980px) {
+    align-self: flex-start;
+    margin-bottom: 30px;
+  }
   h3 {
     font-family: "Hind";
     font-style: normal;

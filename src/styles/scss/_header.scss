@@ -1,7 +1,14 @@
 header {
   padding: 0 20px;
   width: 100%;
-  color: $bgHeaderColor;
+  background-color: $bgHeaderColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  -webkit-box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
+  -moz-box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
+  box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
   .header-wrap {
     max-width: 1110px;
     margin: 0 auto;
@@ -24,6 +31,31 @@ header {
         display: flex;
         justify-content: space-between;
         width: 573px;
+        z-index: 10000;
+        @media (max-width: 980px) {
+          display: none;
+        }
+        &.active {
+          display: flex;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background-color: $bgHeaderColor;
+          top: 90px;
+          left: 0;
+          justify-content: flex-start;
+          padding-top: 40px;
+          padding-left: 20px;
+          .menu {
+            width: auto;
+            flex-direction: column;
+            align-items: space-between;
+            height: 40%;
+            .menu-item {
+              font-size: 20px;
+            }
+          }
+        }
         .menu {
           display: flex;
           width: 100%;
@@ -104,6 +136,61 @@ header {
           border-radius: 50%;
         }
       }
+    }
+  }
+}
+
+.burger-button {
+  background: transparent;
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  display: none;
+  z-index: 10001;
+  @media (max-width: 980px) {
+    display: block;
+  }
+}
+
+.burger-line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  transition: 0.3s;
+  &:first-child {
+    top: 1px;
+  }
+  &:nth-child(2) {
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:nth-child(3) {
+    height: 1px;
+    top: 50%;
+  }
+  &:last-child {
+    bottom: 0;
+  }
+}
+
+.burger-button.active {
+  .burger-line {
+    &:first-child {
+      opacity: 0;
+    }
+    &:last-child {
+      opacity: 0;
+    }
+    &:nth-child(2) {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 }
