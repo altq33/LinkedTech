@@ -1,0 +1,116 @@
+{
+    "goods": [
+        {
+            "id": 1, 
+            "sale": "Get up to 30% off Today Only!",
+            "imgPath": "../imgs/img/speaker.jpg",
+            "name": "Black iPhone Speaker",
+            "category": [
+                "recent",
+                "best",
+                "special",
+                "featured-in"
+            ],
+            "price": 149.99,
+            "oldPrice": 399.99,
+            "raiting": 4
+        }, 
+        {
+            "id": 2, 
+            "sale": "Get up to 10% off Today Only!",
+            "imgPath": "../imgs/img/headphones.jpg",
+            "name": "Black Headphone",
+            "category": [
+                "special",
+                "featured-in"
+            ],
+            "price": 149.99,
+            "oldPrice": 399.99,
+            "raiting": 3
+        }, 
+        {
+            "id": 3, 
+            "sale": "Get up to 20% off Today Only!",
+            "imgPath": "../imgs/img/colone.jpg",
+            "name": "Mackbook Pro",
+            "category": [
+                "recent",
+                "special"
+            ],
+            "price": 149.99,
+            "oldPrice": 399.99,
+            "raiting": 5
+        }, 
+        {
+            "id": 4, 
+            "sale": "Get up to 30% off Today Only!",
+            "imgPath": "../imgs/img/key.jpg",
+            "name": "iOS Keyboard",
+            "category": [
+                "recent",
+                "featured-in"
+            ],
+            "price": 249.99,
+            "oldPrice": 399.99,
+            "raiting": 3
+        }
+        , 
+        {
+            "id": 5, 
+            "sale": "Get up to 10% off Today Only!",
+            "imgPath": "../imgs/img/key.jpg",
+            "name": "Mackbook Pro",
+            "category": [
+                "recent",
+                "featured-in"
+            ],
+            "price": 549.99,
+            "oldPrice": 1399.99,
+            "raiting": 5
+        }
+        , 
+        {
+            "id": 6, 
+            "sale": "Get up to 10% off Today Only!",
+            "imgPath": "../imgs/img/headphones.jpg",
+            "name": "iOS Keyboard",
+            "category": [
+                "recent",
+                "featured-in",
+                "best"
+            ],
+            "price": 1249.99,
+            "oldPrice": 4399.99,
+            "raiting": 1
+        }
+        , 
+        {
+            "id": 7, 
+            "sale": "Get up to 5% off Today Only!",
+            "imgPath": "../imgs/img/colone.jpg",
+            "name": "iOS Animeboard",
+            "category": [
+                "special"
+            ],
+            "price": 1249.99,
+            "oldPrice": 1399.99,
+            "raiting": 1
+        }
+        , 
+        {
+            "id": 8, 
+            "sale": "Get up to 2% off Today Only!",
+            "imgPath": "../imgs/img/headphones.jpg",
+            "name": "Android Phone",
+            "category": [
+                "recent",
+                "featured-in",
+                "best",
+                "special"
+            ],
+            "price": 549.99,
+            "oldPrice": 599.99,
+            "raiting": 2
+        }
+    ]
+}

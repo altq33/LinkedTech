@@ -105,7 +105,8 @@ header {
           background-color: inherit;
           cursor: pointer;
         }
-        .basket {
+        .basket-button {
+          background: transparent;
           width: 16px;
           height: 15.27px;
           @include bgi(url(../../../imgs/icons/basket.svg));

@@ -25,3 +25,21 @@ window.addEventListener("scroll", () => {
     `${window.scrollY}px`
   );
 });
+
+const goodTabsButtons = document.querySelectorAll(".categories-item");
+const goodTabs = document.querySelectorAll(".products-slider");
+
+goodTabsButtons.forEach((item) => {
+  item.addEventListener("click", () => {
+    goodTabsButtons.forEach((el) => {
+      el.classList.remove("current");
+    });
+    item.classList.add("current");
+    let tabID = item.getAttribute("data-tab");
+    goodTabs.forEach((item) => {
+      item.classList.remove("active");
+    });
+    document.querySelector(tabID).classList.add("active");
+    goods.render();
+  });
+});

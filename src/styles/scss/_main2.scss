@@ -52,8 +52,11 @@
   }
 
   .products-slider {
+    &.active {
+      display: flex;
+    }
     width: 100%;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     margin-bottom: 20px;
     justify-content: center;
@@ -119,11 +122,22 @@
           }
           .menu-element {
             background: inherit;
+            transition: all 0.3s;
+            &:hover {
+              transform: scale(1.25);
+              transition: all 0.3s;
+            }
             &:nth-child(1) {
               display: block;
               @include bgi(url(../../../imgs/icons/basket.svg));
               width: 22px;
               height: 22px;
+              &.added {
+                @include bgi(
+                  url(../../../imgs/icons/remove_shopping_cart_FILL0_wght400_GRAD0_opsz48.svg),
+                  no-repeat
+                );
+              }
             }
             &:nth-child(2) {
               width: 18px;
