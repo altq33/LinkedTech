@@ -1,5 +1,9 @@
 let burgerButton = document.querySelector(".burger-button");
 let headerMenu = document.querySelector(".menu-wrap");
+let basketButton = document.querySelector(".basket-button");
+
+
+
 burgerButton.addEventListener("click", (e) => {
   burgerButton.classList.toggle("active");
   headerMenu.classList.toggle("active");

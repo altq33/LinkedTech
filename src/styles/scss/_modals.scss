@@ -1,0 +1,336 @@
+#basket-modal {
+  &.active {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -20%);
+  }
+  width: 55%;
+  height: 75%;
+  background-color: darken($bgHeaderColor, 2%);
+  z-index: 10002;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: $descriptionText;
+  h2 {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+
+.close-basket-modal,
+.close-good-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+    transform: rotate(180deg) scale(1.1);
+  }
+  span:first-child {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(80, 79, 79);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  span:last-child {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(80, 79, 79);
+    top: 50%;
+    transition: 0.3s;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+.close-good-modal {
+  width: 15px;
+  height: 15px;
+  span:first-child,
+  span:last-child {
+    height: 1px;
+  }
+}
+
+.basket-good-container {
+  width: 100%;
+  height: 70%;
+  overflow-y: auto;
+}
+.basket-good {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid rgb(205, 204, 204);
+  padding: 15px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  .price-container {
+    padding-top: 20px;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    .price {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .old-price {
+      font-weight: 300;
+      font-size: 14px;
+      text-decoration-line: line-through;
+      color: $descriptionText;
+      opacity: 0.5;
+      margin-bottom: 10px;
+    }
+    .price-per-one {
+      font-weight: 300;
+      font-size: 14px;
+      color: $descriptionText;
+      opacity: 0.5;
+    }
+    .save {
+      padding: 2px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: white;
+      background: $descriptionMark;
+    }
+  }
+}
+.img-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px;
+  margin-right: 20px;
+  .sale {
+    align-self: flex-start;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px 3px;
+    background-color: $descriptionMark;
+    color: white;
+  }
+  img {
+    width: 100%;
+  }
+}
+.description-container {
+  padding-top: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 20px;
+}
+.name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.propetries {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #686868;
+}
+.property-name {
+  width: 30%;
+  height: 100%;
+  h4 {
+    margin-bottom: 5px;
+  }
+}
+.property-value {
+  width: 50%;
+  height: 100%;
+  h4 {
+    margin-bottom: 5px;
+  }
+}
+
+.left-price {
+  display: flex;
+  flex-direction: column;
+}
+.counter {
+  display: flex;
+  width: 85px;
+  height: 30px;
+  border-radius: 12px;
+  border: 1px solid #a8a8a8;
+  .minus {
+    width: 33.3%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f6f6f6;
+    &:hover {
+      background-color: $descriptionMark;
+      color: white;
+    }
+  }
+  .count {
+    width: 33.3%;
+    text-align: center;
+    background-color: #f6f6f6;
+  }
+  .plus {
+    width: 33.3%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f6f6f6;
+    &:hover {
+      background-color: $descriptionMark;
+      color: white;
+    }
+  }
+}
+.rigth-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase {
+  display: flex;
+  width: 100%;
+  height: 23%;
+  border-radius: 10px;
+  border: 1px solid rgb(205, 204, 204);
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cupon-input {
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+}
+.input-container {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  display: flex;
+  border: 1px solid #a8a8a8;
+  input {
+    width: 85%;
+    background-color: transparent;
+    padding-left: 7px;
+  }
+}
+.check-coupon {
+  width: 15%;
+  height: 100%;
+  outline: none;
+  background-color: #f6f6f6;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #a8a8a8;
+  @include bgi(
+    url("../../../imgs/icons/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg"),
+    no-repeat,
+    cover,
+    center
+  );
+  background-size: 70%;
+  &:hover {
+    background-color: $descriptionMark;
+  }
+}
+.not-finded {
+  font-size: 10px;
+  color: rgb(255, 0, 0);
+  margin-bottom: 3px;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    @include bgi(url(../../../imgs/icons/close_FILL0_wght400_GRAD0_opsz48.svg));
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+  }
+}
+.finded {
+  font-size: 10px;
+  color: rgb(0, 255, 0);
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    @include bgi(url(../../../imgs/icons/done_FILL0_wght400_GRAD0_opsz48.svg));
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.total-price {
+  padding-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.all-prices {
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .old-price {
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration-line: line-through;
+    color: $descriptionText;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+  .save {
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    background: $descriptionMark;
+  }
+}
+
+.buy-button {
+  width: 80px;
+  height: 30px;
+  background-color: $descriptionMark;
+  color: white;
+  border-radius: 12px;
+}

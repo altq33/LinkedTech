@@ -1,9 +1,15 @@
 class Basket {
-    constructor() {
+  constructor() {}
 
-    }
+  render() {
+    const goodsStore = localStorageUtil.getGoods();
 
-    render() { 
-        
-    }
+    let htmlCatalog = "";
+
+    goods.allGoods.forEach(({ id, imgPath, name, price, oldPrice}) => {
+        if(goodsStore.includes(id)) {
+
+        }
+    });
+  }
 }
