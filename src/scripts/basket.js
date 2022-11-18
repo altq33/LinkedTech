@@ -1,7 +1,38 @@
 class Basket {
-  constructor() {}
+  constructor() {
+    this.copons = null;
+    const checkCouponBtn = document.querySelector(".check-coupon");
+    checkCouponBtn.addEventListener("click", () => {
+      this.applyCoupon();
+    });
+  }
 
-  setGoodsTotalPrice() {
+  async getCopons(get) {
+    const response = await fetch(get);
+    this.copons = await response.json();
+  }
+
+  applyCoupon() {
+    this.getCopons("http://localhost:3000/promo").then(() => {
+      const inputCoupon = document.querySelector(".input-container input");
+      let value = inputCoupon.value;
+      let status = false;
+      this.copons.forEach(({ code, intSale }) => {
+        if (code == value.toUpperCase()) {
+          status = true;
+          this.setGoodsTotalPrice(intSale);
+          return;
+        }
+      });
+      if (status) {
+        inputCoupon.style.border = "1px solid rgb(0, 255,0)";
+      } else {
+        inputCoupon.style.border = "1px solid rgb(255, 0,0)";
+      }
+    });
+  }
+
+  setGoodsTotalPrice(sale = 0) {
     const basketGoodPriceOne = document.querySelectorAll(".left-price .price");
     const basketGoodPriceAll = document.querySelectorAll(".right-price .price");
     const basketGoodPriceOldOne = document.querySelectorAll(
@@ -17,6 +48,7 @@ class Basket {
     const totalPrice = document.querySelector(".all-prices .price");
     const totalOldPrice = document.querySelector(".all-prices .old-price");
     const totalSave = document.querySelector(".all-prices .save");
+
     //TODO Было бы классно сделать эту функцию на 3 параметра, чтоб пересчитывать не все элементы, а только передаваемые
     function updateValue() {
       basketGoodPriceOne.forEach((elem, ind) => {
@@ -38,22 +70,21 @@ class Basket {
       setTotal();
     }
 
-    function setTotal() {
+    function setTotal(s = sale) {
       let sum = 0;
       basketGoodPriceAll.forEach((e) => {
         sum += +e.textContent.slice(2);
       });
-      totalPrice.innerHTML = `$ ${sum.toFixed(2)}`;
+      totalPrice.innerHTML = `$ ${(sum - (sum * sale) / 100).toFixed(2)}`;
       sum = 0;
       basketGoodPriceOldAll.forEach((e) => {
         sum += +e.textContent.slice(2);
       });
       totalOldPrice.innerHTML = `$ ${sum.toFixed(2)}`;
-      sum = 0;
-      save.forEach((e) => {
-        sum += +e.textContent.slice(9);
-      });
-      totalSave.innerHTML = `Saving $ ${sum.toFixed(2)}`;
+
+      totalSave.innerHTML = `Saving $ ${(
+        totalOldPrice.textContent.slice(2) - totalPrice.textContent.slice(2)
+      ).toFixed(2)}`;
     }
 
     plusBtn.forEach((el, i) => {
@@ -154,6 +185,7 @@ class Basket {
         }
       }
     );
+
     const goodContainer = document.querySelector(".basket-good-container");
     goodContainer.innerHTML = htmlCatalog;
     this.setGoodsTotalPrice();

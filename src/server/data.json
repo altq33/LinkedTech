@@ -120,5 +120,24 @@
             "oldPrice": 599.99,
             "raiting": 2
         }
-    ]
+    ], 
+   "promo" : [
+     {
+        "code": "KEKS", 
+        "intSale": 100
+     },
+     {
+        "code": "KEKS1", 
+        "intSale": 10
+     },
+     {
+        "code": "KEKS2", 
+        "intSale": 20
+     },
+     {
+        "code": "KEKS3", 
+        "intSale": 30
+     }
+   ]
 }
+
