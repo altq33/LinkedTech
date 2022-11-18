@@ -21,7 +21,7 @@ class Goods {
     } else {
       element.classList.remove("added");
     }
-
+    basket.render();
     localStorageUtil.setGoodsCount();
   }
 
@@ -113,8 +113,3 @@ class Goods {
     localStorageUtil.setGoodsCount();
   }
 }
-
-const goods = new Goods();
-goods.getProducts("http://localhost:3000/goods").then(() => {
-  goods.render();
-});

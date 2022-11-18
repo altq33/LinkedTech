@@ -27,6 +27,8 @@ class LocalStorageUtil {
     return { goods, isPushed };
   }
 
+  
+
   getGoodsLen() {
     return this.getGoods().length;
   }

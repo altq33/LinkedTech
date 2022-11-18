@@ -1,9 +1,8 @@
-let burgerButton = document.querySelector(".burger-button");
-let headerMenu = document.querySelector(".menu-wrap");
-let basketButton = document.querySelector(".basket-button");
-
-
-
+const burgerButton = document.querySelector(".burger-button");
+const headerMenu = document.querySelector(".menu-wrap");
+const basketButton = document.querySelector(".basket-button");
+const basketModal = document.querySelector("#basket-modal");
+const closeModalBtn = basketModal.querySelector(".close-basket-modal");
 burgerButton.addEventListener("click", (e) => {
   burgerButton.classList.toggle("active");
   headerMenu.classList.toggle("active");
@@ -21,6 +20,15 @@ burgerButton.addEventListener("click", (e) => {
     body.style.top = "";
     window.scrollTo(0, parseInt(scrollY || "0") * -1);
   }
+});
+
+basketButton.addEventListener("click", () => {
+  basketModal.classList.toggle("active");
+  basket.render();
+});
+
+closeModalBtn.addEventListener("click", () => {
+  basketModal.classList.remove("active");
 });
 
 window.addEventListener("scroll", () => {

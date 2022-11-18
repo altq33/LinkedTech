@@ -1414,6 +1414,13 @@ a:nth-child(2) .right-column-item {
 }
 
 #basket-modal {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: perspective(600px) translate(0px, -100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
   width: 55%;
   height: 75%;
   background-color: #fafafa;
@@ -1426,10 +1433,10 @@ a:nth-child(2) .right-column-item {
   color: #030d15;
 }
 #basket-modal.active {
-  position: fixed;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -20%);
+  transition: all 0.3s ease;
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) translate(-50%, -20%);
 }
 #basket-modal h2 {
   display: block;
