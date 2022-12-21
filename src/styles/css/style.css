@@ -317,6 +317,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 .fix-main .demonstration-block {
   max-width: 1110px;
@@ -540,42 +541,28 @@ main {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
-.fix-main .proposal-block {
-  max-width: 1140px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 284px;
-}
-@media (max-width: 1175px) {
-  .fix-main .proposal-block {
-    justify-content: center;
-  }
-}
-.fix-main .proposal-block .proposal-content {
-  overflow: hidden;
+.fix-main .swiper-container {
   position: relative;
+  max-width: 1140px;
+  height: 320px;
+  margin-bottom: 284px;
+  overflow: hidden;
+}
+.fix-main .swiper-container .proposal-content {
+  width: 100%;
   padding: 75px 0 74px 35px;
-  width: 555px;
-  height: 296px;
   background: linear-gradient(257.26deg, #008bf0 -13.2%, #d943c9 130.95%);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.fix-main .proposal-block .proposal-content:first-child {
-  margin-right: 30px;
+.fix-main .swiper-container .proposal-content .drone {
+  top: -55px;
+  left: 249px;
 }
-.fix-main .proposal-block .proposal-content:first-child .pic {
-  top: -35px;
-  right: -45.15px;
+.fix-main .swiper-container .proposal-content .camera {
+  top: 20px;
+  left: 300px;
 }
-@media (max-width: 1175px) {
-  .fix-main .proposal-block .proposal-content {
-    margin-bottom: 30px;
-  }
-  .fix-main .proposal-block .proposal-content:first-child {
-    margin-right: 0;
-  }
-}
-.fix-main .proposal-block .sale {
+.fix-main .swiper-container .sale {
   font-family: "Hind";
   font-style: normal;
   font-weight: 500;
@@ -586,7 +573,7 @@ main {
   opacity: 0.6;
   margin-bottom: 5px;
 }
-.fix-main .proposal-block .product-name {
+.fix-main .swiper-container .product-name {
   font-family: "Hind";
   font-style: normal;
   font-weight: 600;
@@ -595,7 +582,7 @@ main {
   color: #f4f9fc;
   margin-bottom: 7px;
 }
-.fix-main .proposal-block .link-to-product {
+.fix-main .swiper-container .link-to-product {
   font-family: "Hind";
   font-style: normal;
   font-weight: 500;
@@ -606,10 +593,8 @@ main {
   color: #f4f9fc;
   display: inline;
 }
-.fix-main .proposal-block .pic {
+.fix-main .swiper-container .pic {
   position: absolute;
-  top: 36px;
-  right: 25.85px;
 }
 .fix-main .about-wrap {
   margin-bottom: 124px;
@@ -1773,4 +1758,23 @@ a:nth-child(2) .right-column-item {
   background-color: #247cc0;
   color: white;
   border-radius: 12px;
+}
+
+.swiper-button-prev:after {
+  color: black;
+}
+
+.swiper-button-next:after {
+  color: black;
+}
+
+.swiper-pagination {
+  bottom: 2px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  font-size: 17px;
+  background-color: black !important;
 }/*# sourceMappingURL=style.css.map */

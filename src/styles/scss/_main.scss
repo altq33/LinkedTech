@@ -6,6 +6,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
   .demonstration-block {
     max-width: 1110px;
     margin: 54px auto 110px auto;
@@ -221,38 +222,27 @@ main {
       }
     }
   }
-  .proposal-block {
+  
+  .swiper-container {
+    position: relative;
     max-width: 1140px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 320px;
     margin-bottom: 284px;
-    @media (max-width: 1175px) {
-      justify-content: center;
-    }
+    overflow: hidden;
     .proposal-content {
-      overflow: hidden;
-      position: relative;
+      width: 100%;
       padding: 75px 0 74px 35px;
-      width: 555px;
-      height: 296px;
       background: linear-gradient(257.26deg, #008bf0 -13.2%, #d943c9 130.95%);
       border: 1px solid rgba(0, 0, 0, 0.1);
-      &:first-child {
-        margin-right: 30px;
-        .pic {
-          top: -35px;
-          right: -45.15px;
-        }
+      .drone {
+        top: -55px;
+        left: 249px;
       }
-      @media (max-width: 1175px) {
-        margin-bottom: 30px;
-        &:first-child {
-          margin-right: 0;
-        }
+      .camera {
+        top: 20px;
+        left: 300px;
       }
     }
-
-    
     .sale {
       font-family: "Hind";
       font-style: normal;
@@ -286,10 +276,9 @@ main {
     }
     .pic {
       position: absolute;
-      top: 36px;
-      right: 25.85px;
     }
   }
+
   .about-wrap {
     margin-bottom: 124px;
     width: 100%;

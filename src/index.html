@@ -11,6 +11,10 @@
       href="../imgs/icons/favicon.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div id="basket-modal">
@@ -169,24 +173,72 @@
             </div>
           </div>
 
-          <div class="proposal-block">
-            <div class="proposal-content">
-              <div class="proposal-text">
-                <h2 class="sale">Get up to 20% off Today Only!</h2>
-                <h2 class="product-name">THE 4K HDR<br />COMPACT DRONE</h2>
-                <a href=""><h2 class="link-to-product">Show Now</h2></a>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="proposal-content">
+                  <div class="proposal-text">
+                    <h2 class="sale">Get up to 20% off Today Only!</h2>
+                    <h2 class="product-name">THE 4K HDR<br />COMPACT DRONE</h2>
+                    <a href=""><h2 class="link-to-product">Show Now</h2></a>
+                  </div>
+                  <img
+                    src="../imgs/img/drone.png"
+                    alt="logoprod1"
+                    class="pic drone"
+                  />
+                </div>
               </div>
-              <img src="../imgs/img/drone.png" alt="logoprod1" class="pic" />
-            </div>
-
-            <div class="proposal-content">
-              <div class="proposal-text">
-                <h2 class="sale">Get up to 30% off Today Only!</h2>
-                <h2 class="product-name">THE 4K HDR<br />COMPACT Camera</h2>
-                <a href=""><h2 class="link-to-product">Show Now</h2></a>
+              <div class="swiper-slide">
+                <div class="proposal-content">
+                  <div class="proposal-text">
+                    <h2 class="sale">Get up to 30% off Today Only!</h2>
+                    <h2 class="product-name">THE 4K HDR<br />COMPACT Camera</h2>
+                    <a href=""><h2 class="link-to-product">Show Now</h2></a>
+                  </div>
+                  <img
+                    src="../imgs/img/camera.png"
+                    alt="logoprod2"
+                    class="pic camera"
+                  />
+                </div>
               </div>
-              <img src="../imgs/img/camera.png" alt="logoprod2" class="pic" />
+              <div class="swiper-slide">
+                <div class="proposal-content">
+                  <div class="proposal-text">
+                    <h2 class="sale">Get up to 20% off Today Only!</h2>
+                    <h2 class="product-name">
+                      THE 4K HDR<br />COMPACT HELICOPTER
+                    </h2>
+                    <a href=""><h2 class="link-to-product">Show Now</h2></a>
+                  </div>
+                  <img
+                    src="../imgs/img/drone.png"
+                    alt="logoprod1"
+                    class="pic drone"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="proposal-content">
+                  <div class="proposal-text">
+                    <h2 class="sale">Get up to 30% off Today Only!</h2>
+                    <h2 class="product-name">
+                      THE 4K HDR<br />COMPACT RECORDER
+                    </h2>
+                    <a href=""><h2 class="link-to-product">Show Now</h2></a>
+                  </div>
+                  <img
+                    src="../imgs/img/camera.png"
+                    alt="logoprod2"
+                    class="pic camera"
+                  />
+                </div>
+              </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
 
           <div class="about-wrap">
@@ -418,10 +470,10 @@
         </div>
       </footer>
     </div>
-
     <script src="../src/scripts/getgoods.js"></script>
     <script src="../src/scripts/LocalStorageUtil.js"></script>
     <script src="../src/scripts/basket.js"></script>
     <script src="../src/scripts/index.js"></script>
+    <script src="../src/scripts/swiper.js" type="module"></script>
   </body>
 </html>
