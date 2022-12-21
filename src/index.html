@@ -309,6 +309,29 @@
                 featured in
               </li>
             </ul>
+            <div class="dropdown-container">
+              <button class="dropdown" role="listbox">Without a filter</button>
+              <ul class="dropdown-list">
+                <li class="dropdown-list-item" data-value="no-filter">
+                  Without a filter 
+                </li>
+                <li class="dropdown-list-item" data-value="cheap">
+                  At first cheap
+                </li>
+
+                <li class="dropdown-list-item" data-value="expensive">
+                  At first expensive
+                </li>
+                <li class="dropdown-list-item" data-value="discount">
+                  By discounts size
+                </li>
+                <li class="dropdown-list-item" data-value="rating">
+                  By rating
+                </li>
+              </ul>
+              <input type="text" value="" class="dropdown-input">
+            </div>
+
             <div class="products-slider active" id="recent"></div>
             <div class="products-slider" id="best"></div>
             <div class="products-slider" id="special"></div>
@@ -475,5 +498,6 @@
     <script src="../src/scripts/basket.js"></script>
     <script src="../src/scripts/index.js"></script>
     <script src="../src/scripts/swiper.js" type="module"></script>
+    <script src="../src/scripts/filters.js"></script>
   </body>
 </html>

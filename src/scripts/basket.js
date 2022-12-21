@@ -200,3 +200,4 @@ goods.getProducts("http://localhost:3000/goods").then(() => {
   goods.render();
   basket.render();
 });
+

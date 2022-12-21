@@ -1,0 +1,78 @@
+.dropdown-container {
+  position: relative;
+  width: 20%;
+}
+.dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  display: flex;
+
+  align-items: center;
+  background-color: white;
+  border: 1px solid $descriptionText;
+  border-radius: 10px;
+  height: 30px;
+
+  padding: 5px 0 5px 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  cursor: pointer;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 8px 4px 0 4px;
+    border-color: black transparent transparent transparent;
+    border-style: solid;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px lighten($bgNumberShopping, 15%);
+  }
+}
+
+.dropdown-list {
+  display: none;
+  z-index: 998;
+  position: absolute;
+  top: 40px;
+  background-color: darken($bgHeaderColor, 2%);
+  -webkit-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  &.active {
+    display: block;
+  }
+}
+.dropdown-list-item {
+  color: $descriptionText;
+  border-bottom: 1px solid $descriptionText;
+  display: block;
+  padding: 7px;
+  cursor: pointer;
+  &:last-child {
+    border: none;
+  }
+  &:hover {
+    background-color: darken($bgHeaderColor, 5%);
+  }
+}
+
+.dropdown-input {
+  display: none;
+}
