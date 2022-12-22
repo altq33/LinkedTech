@@ -217,6 +217,11 @@ header .header-wrap .header-content .user-bar .search-button {
   background-position: center;
   background-color: inherit;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+header .header-wrap .header-content .user-bar .search-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
 }
 header .header-wrap .header-content .user-bar .basket-button {
   background: transparent;
@@ -226,6 +231,11 @@ header .header-wrap .header-content .user-bar .basket-button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: all 0.3s ease;
+}
+header .header-wrap .header-content .user-bar .basket-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
 }
 header .header-wrap .header-content .user-bar .basket-button .number-shopping {
   width: 12px;
@@ -263,11 +273,16 @@ header .header-wrap .header-content .user-bar .user-pic-container {
   height: 15px;
   display: none;
   z-index: 10001;
+  transition: all 0.3s ease;
 }
 @media (max-width: 980px) {
   .burger-button {
     display: block;
   }
+}
+.burger-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
 }
 
 .burger-line {
@@ -1326,6 +1341,7 @@ a:nth-child(2) .right-column-item {
   align-items: flex-start;
 }
 .nav-list li {
+  transition: all 0.4s ease;
   font-family: "Hind";
   font-style: normal;
   font-weight: 400;
@@ -1334,6 +1350,10 @@ a:nth-child(2) .right-column-item {
   color: #ffffff;
   opacity: 0.6;
   margin-bottom: 15px;
+}
+.nav-list li:hover {
+  transition: all 0.4s ease;
+  transform: scale(1.1);
 }
 
 .social-media {
@@ -1793,7 +1813,7 @@ a:nth-child(2) .right-column-item {
 
 .dropdown-container {
   position: relative;
-  width: 20%;
+  width: 200px;
 }
 
 .dropdown {

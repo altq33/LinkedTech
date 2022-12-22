@@ -104,13 +104,22 @@ header {
           @include bgi(url(../../../imgs/icons/search.svg));
           background-color: inherit;
           cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            transition: all 0.3s ease;
+            transform: scale(1.2);
+          }
         }
         .basket-button {
           background: transparent;
           width: 16px;
           height: 15.27px;
           @include bgi(url(../../../imgs/icons/basket.svg));
-
+          transition: all 0.3s ease;
+          &:hover {
+            transition: all 0.3s ease;
+            transform: scale(1.2);
+          }
           .number-shopping {
             width: 12px;
             height: 12px;
@@ -151,6 +160,11 @@ header {
   z-index: 10001;
   @media (max-width: 980px) {
     display: block;
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.2);
   }
 }
 
