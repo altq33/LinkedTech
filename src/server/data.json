@@ -14,7 +14,7 @@
             ],
             "price": 149.99,
             "oldPrice": 399.99,
-            "raiting": 4
+            "rating": 4
         }, 
         {
             "id": 2, 
@@ -28,7 +28,7 @@
             ],
             "price": 149.99,
             "oldPrice": 399.99,
-            "raiting": 3
+            "rating": 3
         }, 
         {
             "id": 3, 
@@ -42,7 +42,7 @@
             ],
             "price": 149.99,
             "oldPrice": 399.99,
-            "raiting": 5
+            "rating": 5
         }, 
         {
             "id": 4, 
@@ -56,7 +56,7 @@
             ],
             "price": 249.99,
             "oldPrice": 399.99,
-            "raiting": 3
+            "rating": 3
         }
         , 
         {
@@ -71,7 +71,7 @@
             ],
             "price": 549.99,
             "oldPrice": 1399.99,
-            "raiting": 5
+            "rating": 5
         }
         , 
         {
@@ -87,7 +87,7 @@
             ],
             "price": 1249.99,
             "oldPrice": 4399.99,
-            "raiting": 1
+            "rating": 1
         }
         , 
         {
@@ -101,7 +101,7 @@
             ],
             "price": 1249.99,
             "oldPrice": 1399.99,
-            "raiting": 1
+            "rating": 1
         }
         , 
         {
@@ -118,7 +118,7 @@
             ],
             "price": 549.99,
             "oldPrice": 599.99,
-            "raiting": 2
+            "rating": 2
         }
     ], 
    "promo" : [

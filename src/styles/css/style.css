@@ -1120,6 +1120,18 @@ a:nth-child(2) .right-column-item {
   margin-bottom: 30px;
 }
 
+.left-column-item,
+.middle-column-item,
+.right-column-item {
+  transition: all 0.3s ease;
+}
+.left-column-item:hover,
+.middle-column-item:hover,
+.right-column-item:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
 .contact-us {
   width: 100%;
   min-height: 310px;

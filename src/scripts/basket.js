@@ -136,7 +136,7 @@ class Basket {
     let htmlCatalog = "";
 
     goods.allGoods.forEach(
-      ({ id, imgPath, name, price, oldPrice, intSale, raiting }) => {
+      ({ id, imgPath, name, price, oldPrice, intSale, rating }) => {
         if (goodsStore.includes(`${id}`)) {
           htmlCatalog += `
         <div class="basket-good" data-good-card-id="${id}">
@@ -159,7 +159,7 @@ class Basket {
             <div class="property-value">
               <h4>-${intSale}%</h4>
               <h4>${price}$</h4>
-              <h4>${raiting}</h4>
+              <h4>${rating}</h4>
             </div>
           </div>
         </div>

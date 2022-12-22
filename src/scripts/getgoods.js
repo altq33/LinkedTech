@@ -44,7 +44,7 @@ class Goods {
     const goodsStore = localStorageUtil.getGoods();
 
     goods.forEach(
-      ({ id, sale, imgPath, name, category, price, oldPrice, raiting }) => {
+      ({ id, sale, imgPath, name, category, price, oldPrice, rating }) => {
         this.activeBasketClass = "";
 
         if (goodsStore.includes(`${id}`)) {
@@ -75,7 +75,7 @@ class Goods {
               <p class="price">$ ${price}</p>
               <p class="old-price">$ ${oldPrice}</p>
             </div>
-          ${this.createStars(raiting)}
+          ${this.createStars(rating)}
           </div>
           <div class="color-picker">
             <button class="color color1 picked"></button>
