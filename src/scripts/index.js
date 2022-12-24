@@ -6,7 +6,6 @@ const closeModalBtn = basketModal.querySelector(".close-basket-modal");
 burgerButton.addEventListener("click", (e) => {
   burgerButton.classList.toggle("active");
   headerMenu.classList.toggle("active");
-
   if (burgerButton.classList.contains("active")) {
     const scrollY =
       document.documentElement.style.getPropertyValue("--scroll-y");

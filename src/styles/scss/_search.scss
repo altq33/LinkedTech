@@ -1,0 +1,144 @@
+.search-container {
+  position: relative;
+  width: 0px;
+  height: 35px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  &.active {
+    width: 200px;
+  }
+  margin-left: 30px;
+}
+.seacrh-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: darken(#fff, 10%);
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 0 60px 0 20px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.search-button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.cancel-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  @include bgi(
+    url(../../../imgs/icons/close_FILL0_wght400_GRAD0_opsz48\ copy.svg)
+  );
+  background-color: inherit;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  visibility: hidden;
+  &:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.2) translateY(-50%);
+  }
+  &.active {
+    right: -20px;
+    visibility: visible;
+  }
+}
+
+.search-results {
+  z-index: 10003;
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  bottom: -265px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: darken($bgHeaderColor, 5%);
+  left: -100px;
+  display: none;
+  padding: 5px;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: darken($bgHeaderColor, 5%);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid darken(white, 25%);
+  }
+  a {
+    height: 48%;
+    margin-bottom: 10px;
+  }
+}
+
+.search-results-item {
+  color: $descriptionText;
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  height: 100%;
+
+  border-radius: 10px;
+  padding: 10px 5px;
+  img {
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .info {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .name {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .rate-star {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    transition: all 0.3s ease;
+    transform: scale(0.93);
+  }
+}
+
+.no-results {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 1.5;
+  color: $descriptionText;
+}

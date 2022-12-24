@@ -114,7 +114,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 10003;
   box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
 }
 header .header-wrap {
@@ -202,7 +202,8 @@ header .header-wrap .header-content .menu-wrap .menu-item:hover {
   transition: 0.3s ease all;
 }
 header .header-wrap .header-content .user-bar {
-  width: 127px;
+  position: relative;
+  min-width: 200px;
   height: 35px;
   display: flex;
   justify-content: space-between;
@@ -221,9 +222,10 @@ header .header-wrap .header-content .user-bar .search-button {
 }
 header .header-wrap .header-content .user-bar .search-button:hover {
   transition: all 0.3s ease;
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-50%);
 }
 header .header-wrap .header-content .user-bar .basket-button {
+  margin-left: 30px;
   background: transparent;
   width: 16px;
   height: 15.27px;
@@ -254,6 +256,7 @@ header .header-wrap .header-content .user-bar .basket-button .number-shopping {
   bottom: 4.82px;
 }
 header .header-wrap .header-content .user-bar .user-pic-container {
+  margin-left: 30px;
   background-image: url(../../../imgs/icons/userpic.svg);
   background-repeat: no-repeat;
   background-size: 16px;
@@ -1881,4 +1884,146 @@ a:nth-child(2) .right-column-item {
 
 .dropdown-input {
   display: none;
+}
+
+.search-container {
+  position: relative;
+  width: 0px;
+  height: 35px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: 30px;
+}
+.search-container.active {
+  width: 200px;
+}
+
+.seacrh-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #e6e6e6;
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 0 60px 0 20px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.seacrh-input.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.cancel-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../imgs/icons/close_FILL0_wght400_GRAD0_opsz48\ copy.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: inherit;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  visibility: hidden;
+}
+.cancel-button:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2) translateY(-50%);
+}
+.cancel-button.active {
+  right: -20px;
+  visibility: visible;
+}
+
+.search-results {
+  z-index: 10003;
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  bottom: -265px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #f2f2f2;
+  left: -100px;
+  display: none;
+  padding: 5px;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 0px 6px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.search-results::-webkit-scrollbar {
+  width: 5px;
+}
+.search-results::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+}
+.search-results::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid #bfbfbf;
+}
+.search-results a {
+  height: 48%;
+  margin-bottom: 10px;
+}
+
+.search-results-item {
+  color: #030d15;
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  height: 100%;
+  border-radius: 10px;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+}
+.search-results-item img {
+  height: 100%;
+  margin-right: 10px;
+}
+.search-results-item .info {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.search-results-item .info .name {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.search-results-item .info .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.search-results-item .info .rate-star {
+  width: 20px;
+  height: 20px;
+}
+.search-results-item:hover {
+  transition: all 0.3s ease;
+  transform: scale(0.93);
+}
+
+.no-results {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #030d15;
 }/*# sourceMappingURL=style.css.map */

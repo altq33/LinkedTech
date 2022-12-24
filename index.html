@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinkedTech</title>
-    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link rel="stylesheet" href="./src/styles/css/style.css" />
     <link
       rel="shortcut icon"
-      href="../imgs/icons/favicon.png"
+      href="./imgs/icons/favicon.png"
       type="image/x-icon"
     />
     <link
@@ -60,13 +60,24 @@
               </ul>
             </div>
             <div class="user-bar">
+              <ul class="search-results">
+             
+              </ul>
               <button class="burger-button">
                 <span class="burger-line"></span
                 ><span class="burger-line"></span
                 ><span class="burger-line"></span
                 ><span class="burger-line"></span>
               </button>
-              <button class="search-button"></button>
+              <div class="search-container">
+                <input
+                  type="text"
+                  class="seacrh-input"
+                  placeholder="Enter for search"
+                />
+                <button class="search-button"></button>
+                <button class="cancel-button"></button>
+              </div>
               <button href="#" class="basket-button">
                 <div class="number-shopping">
                   <span class="count-products">0</span>
@@ -98,26 +109,26 @@
               </div>
             </div>
             <div class="picture">
-              <img src="../imgs/img/81Z-7PzoB9L 1.jpg" alt="radio" />
+              <img src="./imgs/img/81Z-7PzoB9L 1.jpg" alt="radio" />
             </div>
             <div class="sponsors">
               <img
-                src="../imgs/img/cl_logo4.jpg"
+                src="./imgs/img/cl_logo4.jpg"
                 alt="logo1"
                 class="sponsors-pic"
               />
               <img
-                src="../imgs/img/cl_logo5.jpg"
+                src="./imgs/img/cl_logo5.jpg"
                 alt="logo2"
                 class="sponsors-pic"
               />
               <img
-                src="../imgs/img/cl_logo7.jpg"
+                src="./imgs/img/cl_logo7.jpg"
                 alt="logo3"
                 class="sponsors-pic"
               />
               <img
-                src="../imgs/img/cl_logo2.jpg"
+                src="./imgs/img/cl_logo2.jpg"
                 alt="logo4"
                 class="sponsors-pic"
               />
@@ -127,7 +138,7 @@
           <div class="products-block">
             <div class="product">
               <img
-                src="../imgs/img/prod1.jpg"
+                src="./imgs/img/prod1.jpg"
                 alt="product2"
                 class="product-view"
               />
@@ -150,7 +161,7 @@
             </div>
             <div class="product">
               <img
-                src="../imgs/img/prod2.jpg"
+                src="./imgs/img/prod2.jpg"
                 alt="product2"
                 class="product-view"
               />
@@ -183,7 +194,7 @@
                     <a href=""><h2 class="link-to-product">Show Now</h2></a>
                   </div>
                   <img
-                    src="../imgs/img/drone.png"
+                    src="./imgs/img/drone.png"
                     alt="logoprod1"
                     class="pic drone"
                   />
@@ -197,7 +208,7 @@
                     <a href=""><h2 class="link-to-product">Show Now</h2></a>
                   </div>
                   <img
-                    src="../imgs/img/camera.png"
+                    src="./imgs/img/camera.png"
                     alt="logoprod2"
                     class="pic camera"
                   />
@@ -213,7 +224,7 @@
                     <a href=""><h2 class="link-to-product">Show Now</h2></a>
                   </div>
                   <img
-                    src="../imgs/img/drone.png"
+                    src="./imgs/img/drone.png"
                     alt="logoprod1"
                     class="pic drone"
                   />
@@ -229,7 +240,7 @@
                     <a href=""><h2 class="link-to-product">Show Now</h2></a>
                   </div>
                   <img
-                    src="../imgs/img/camera.png"
+                    src="./imgs/img/camera.png"
                     alt="logoprod2"
                     class="pic camera"
                   />
@@ -244,11 +255,7 @@
           <div class="about-wrap">
             <div class="fix-about">
               <div class="left-part">
-                <img
-                  src="../imgs/img/woman2.png"
-                  alt="woman"
-                  class="left-pic"
-                />
+                <img src="./imgs/img/woman2.png" alt="woman" class="left-pic" />
               </div>
               <div class="right-part">
                 <div class="about-products-container">
@@ -351,14 +358,14 @@
                 <a href="#"
                   ><div class="left-column-item">
                     <img
-                      src="../imgs/img/left-column-good1.jpg"
+                      src="./imgs/img/left-column-good1.jpg"
                       alt="good1"
                     /></div
                 ></a>
                 <a href="#"
                   ><div class="left-column-item">
                     <img
-                      src="../imgs/img/left-column-good2.jpg"
+                      src="./imgs/img/left-column-good2.jpg"
                       alt="good2"
                     /></div
                 ></a>
@@ -367,18 +374,18 @@
                 <a href=""
                   ><div class="middle-column-item">
                     <img
-                      src="../imgs/img/middle-column-good1.jpg"
+                      src="./imgs/img/middle-column-good1.jpg"
                       alt="good1"
                     /></div
                 ></a>
                 <a href=""
                   ><div class="middle-column-item">
-                    <img src="../imgs/img/81Z-7PzoB9L 1.jpg" alt="good3" /></div
+                    <img src="./imgs/img/81Z-7PzoB9L 1.jpg" alt="good3" /></div
                 ></a>
                 <a href=""
                   ><div class="middle-column-item">
                     <img
-                      src="../imgs/img/middle-column-good3.jpg"
+                      src="./imgs/img/middle-column-good3.jpg"
                       alt="good3"
                     /></div
                 ></a>
@@ -387,14 +394,14 @@
                 <a href=""
                   ><div class="right-column-item">
                     <img
-                      src="../imgs/img/right-column-good1.jpg"
+                      src="./imgs/img/right-column-good1.jpg"
                       alt="good1"
                     /></div
                 ></a>
                 <a href=""
                   ><div class="right-column-item">
                     <img
-                      src="../imgs/img/right-column-good2.jpg"
+                      src="./imgs/img/right-column-good2.jpg"
                       alt="good2"
                     /></div
                 ></a>
@@ -428,7 +435,7 @@
           <div class="footer-container">
             <nav class="fix-content">
               <div class="store-information">
-                <img src="../imgs/img/logo-foot.svg" alt="foot-logo" />
+                <img src="./imgs/img/logo-foot.svg" alt="foot-logo" />
                 <p class="store-info-text">
                   STORE - worldwide fashion store since 1978. We sell over 1000+
                   branded products on our web-site.
@@ -492,11 +499,12 @@
         </div>
       </footer>
     </div>
-    <script src="../src/scripts/getgoods.js"></script>
-    <script src="../src/scripts/LocalStorageUtil.js"></script>
-    <script src="../src/scripts/basket.js"></script>
-    <script src="../src/scripts/index.js"></script>
-    <script src="../src/scripts/swiper.js" type="module"></script>
-    <script src="../src/scripts/filters.js"></script>
+    <script src="./src/scripts/getgoods.js"></script>
+    <script src="./src/scripts/LocalStorageUtil.js"></script>
+    <script src="./src/scripts/basket.js"></script>
+    <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/swiper.js" type="module"></script>
+    <script src="./src/scripts/filters.js"></script>
+    <script src="./src/scripts/search.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 10003;
   -webkit-box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
   -moz-box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
   box-shadow: 0px 2px 14px 0px rgba(50, 50, 50, 0.28);
@@ -92,12 +92,12 @@ header {
         }
       }
       .user-bar {
-        width: 127px;
+        position: relative;
+        min-width: 200px;
         height: 35px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .search-button {
           width: 16px;
           height: 16px;
@@ -107,10 +107,11 @@ header {
           transition: all 0.3s ease;
           &:hover {
             transition: all 0.3s ease;
-            transform: scale(1.2);
+            transform: scale(1.2) translateY(-50%);
           }
         }
         .basket-button {
+          margin-left: 30px;
           background: transparent;
           width: 16px;
           height: 15.27px;
@@ -138,6 +139,7 @@ header {
           }
         }
         .user-pic-container {
+          margin-left: 30px;
           @include bgi(url(../../../imgs/icons/userpic.svg), no-repeat, 16px);
           display: block;
           width: 35px;
